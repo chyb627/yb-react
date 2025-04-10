@@ -1,4 +1,5 @@
 # yb-react
+
 > React(Pure) Practice 프로젝트입니다.
 
 ---
@@ -15,6 +16,7 @@ $ yarn create react-app yb-react --template typescript
 ---
 
 ## 📁 폴더 구조
+
 ```
 yb-react/
 ├── node_modules/          # 패키지 모듈 저장 디렉토리 (커밋 제외)
@@ -27,21 +29,30 @@ yb-react/
     ├── App.css            # App 컴포넌트 전용 스타일
     ├── index.js           # App 컴포넌트를 HTML에 렌더링하는 진입점
     └── index.css          # 전역 스타일 정의
-```     
+```
+
 ---
-    
+
 ## 📝 주요 파일 설명
 
-| 파일/디렉토리       | 설명 |
-|--------------------|------|
-| `node_modules/`     | 설치된 외부 패키지 모듈 저장소 *(커밋하지 않음)* |
-| `package.json`      | 의존성 관리 및 프로젝트 메타 정보 포함 |
-| `public/index.html` | 앱이 렌더링될 HTML 템플릿 |
-| `public/favicon.ico`| 브라우저 탭에 표시될 아이콘 |
-| `src/App.js`        | 앱의 메인 컴포넌트 (JSX 문법 사용) |
-| `src/App.css`       | App 컴포넌트 전용 스타일 |
-| `src/index.js`      | App 컴포넌트를 HTML에 렌더링 |
-| `src/index.css`     | 전역 스타일 적용을 위한 CSS 파일 |
+| 파일/디렉토리        | 설명                                             |
+| -------------------- | ------------------------------------------------ |
+| `node_modules/`      | 설치된 외부 패키지 모듈 저장소 _(커밋하지 않음)_ |
+| `package.json`       | 의존성 관리 및 프로젝트 메타 정보 포함           |
+| `public/index.html`  | 앱이 렌더링될 HTML 템플릿                        |
+| `public/favicon.ico` | 브라우저 탭에 표시될 아이콘                      |
+| `src/App.js`         | 앱의 메인 컴포넌트 (JSX 문법 사용)               |
+| `src/App.css`        | App 컴포넌트 전용 스타일                         |
+| `src/index.js`       | App 컴포넌트를 HTML에 렌더링                     |
+| `src/index.css`      | 전역 스타일 적용을 위한 CSS 파일                 |
 
 ---
 
+## React-router-dom
+
+- React 앱의 라우팅 처리를 위한 라이브러리
+- React의 react-router 라이브러리 기반으로 만들어짐
+
+```sh
+$ yarn add react-router-dom
+```
