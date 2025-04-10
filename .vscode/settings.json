@@ -1,8 +1,6 @@
 {
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "json"],
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "never"
-  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -14,20 +12,5 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.associations": {
-    "*.json": "jsonc" // json 에서 주석사용.
-  },
-  "[json]": {
-    "editor.defaultFormatter": null // @builtin json language features disable
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": null // @builtin json language features disable
-  },
-  "typescript.validate.enable": false,
-  "typescript.disableAutomaticTypeAcquisition": true,
-  "javascript.validate.enable": true,
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "prettier.configPath": ".prettierrc",
-  "editor.formatOnSave": true,
+  }
 }
