@@ -56,3 +56,53 @@ yb-react/
 ```sh
 $ yarn add react-router-dom
 ```
+
+---
+
+## 컴포넌트
+
+- 리액트 앱을 구성하는 최소한의 단위
+- 애플리케이션의 구성 요소를 담당하며, 재사용 가능하고 독립적인단위로 구성
+- 재사용
+  - 컴포넌트는 독립적이고 모듈화된 단위로 작성.
+  - 필요한 곳에서 쉽게 재사용 가능
+- 가독성과 유지보수성
+  - UI 구조를 명확하게 파악 가능
+  - 개별 컴포넌트를 수정하여 유지보수를 용이하게 함
+- 효율적 업데이트
+  - 가상 DOM 활용하여 효율적이게 업데이트, 필요한 부분만 다시 렌더링
+
+---
+
+## CSS의 BEM 모델
+
+- BEM
+  - Block-Element-Modifier 모델
+  - CSS 클래스 네이밍
+  - 가독성, 재사용성 UP
+  - Blockl : 최상위 요소
+  - Element : 블록의 일부. 특정 기능 수행
+  - Modifier : 블록, 엘리먼트의 외관이나 상태 변경
+- BEM 장점
+  - 가독성 : 클래스명에 구조적인 정보를 담아 코드를 읽기 쉽게 함
+  - 재사용성 : 모듈화된 구조로 컴포넌트의 재사용 쉬움
+  - 유지보수성 : 클래스간의 의존성을 낮춤
+- BEM 단점
+  - 클래스명 길어질 수 있음
+  - 요소 및 수정자 사용을 위해 추가적인 클래스 작성
+
+```html
+<div class="block">
+  <h2 class="block__title">Block Title</h2>
+  <ul class="block__list">
+    <li class="block__list-item">Item 1</li>
+    <li class="block__list-item block__list-item--highlighted">Item 2</li>
+    <li class="block__list-item">Item 3</li>
+  </ul>
+</div>
+
+<!-- block : Block -->
+<!-- block__title : Element -->
+<!-- block__list : Element -->
+<!-- block__list-item--highlighted : Modifier -->
+```
