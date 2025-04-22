@@ -216,6 +216,62 @@ Firebase의 **클라우드 기반 NoSQL 데이터베이스**:
   - 사용자의 로그인 상태 확인 후 적절한 작업 수행
   - 로그인 상태일 때는 사용자의 정보를 아니라면 Null을 리턴함.
 
+---
+
+### Context API
+
+- React가 자체적으로 제공하는 상태 관리 방법
+  - 컴포넌트 트리 안에서 전역적으로 사용할 수 있는 값 관리
+  - Props Drilling을 피하고, 컴포넌트 간 상태를 쉽게 공유 가능
+  - 데이터를 공유하기 위한 방법
+  - Ex. 로그인한 사용자의 정보, 테마, 언어 설정 등
+- 장점
+  - 추가적인 라이브러리 설치 필요없음
+- 단점
+  - 복잡한 상태 관리는 어려움
+  - 너무 많은 Context를 사용하면 재사용성 떨어짐
+- 사용사례
+  - 다크모드 구현
+  - 다국어 처리 구현
+  - etc..
+
+```js
+// 1. Context 생성
+import { createContext } from 'react';
+export const LevelContext = createContext(1);
+```
+
+```js
+// 2. Provider 설정
+import { LevelContext } from './LevelContext.js';
+export default function Section({ level, children }) {
+  return (
+    <section>
+      <LevelContext.Provider value={level}>{children}</LevelContext.Provider>
+    </section>
+  );
+}
+```
+
+```js
+// 3-1. Consumer 설정
+import { LevelContext } from './LevelContext.js';
+export default function Heading({ children }) {
+  <LevelContext.Consumer>{({ level }) => <div>{level}</div>}</LevelContext.Consumer>;
+}
+```
+
+```js
+// 3-2. useContext hook 사용
+import { useContext } from 'react';
+import { LevelContext } from './LevelContext.js';
+export default function Heading({ children }) {
+  const level = useContext(LevelContext);
+
+  // 전역 상태인 level 값 사용 가능
+}
+```
+
 ## env
 
 [링크](https://www.notion.so/env-1dc59a34b64c801d966ee966bca84e61?showMoveTo=true&saveParent=true)
