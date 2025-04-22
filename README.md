@@ -272,6 +272,22 @@ export default function Heading({ children }) {
 }
 ```
 
+### Firestore
+
+- Firebase에서 제공하는 NoSQL 형식의 클라우드 데이터베이스
+- 데이터를 저장하고 불러오는 일이 매우 중요한데, Cloud Firestore는 이러한 일을 쉽게 도와줌
+- Firestore는 실시간 데이터 동기화를 지원하며, 웹, 안드로이드, iOS에서 데이터를 저장하고 동기화할 수 있음
+- 데이터는 문서(document)와 컬렉션(collection)의 형태로 저장되며, 이는 효율적인 쿼리 작성을 가능하게함.
+- 컬렉션 > 문서 > 컬렉션/필드 추가
+- 오프라인 지원 제공
+- 실시간 데이터 동기화
+  - 실시간 채팅 및 데이터 분석 등 실시간 기능 애플리케이션 개발
+- 구조화된 데이터
+  - 문서, 컬렉션 형태로 데이터 저장
+  - 구조화된 데이터 쉽게 저장하고 불러올 수 있음
+- 보안
+  - 사용자 기반의 보안규칙 설정 가능
+
 ## env
 
 [링크](https://www.notion.so/env-1dc59a34b64c801d966ee966bca84e61?showMoveTo=true&saveParent=true)
